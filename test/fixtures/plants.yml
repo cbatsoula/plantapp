@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plant_name: MyString
+  plant_nickname: MyString
+  acquired: MyString
+  indoor: false
+  outdoor: false
+  repot: MyString
+
+two:
+  plant_name: MyString
+  plant_nickname: MyString
+  acquired: MyString
+  indoor: false
+  outdoor: false
+  repot: MyString
