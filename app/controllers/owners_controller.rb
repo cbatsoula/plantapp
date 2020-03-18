@@ -23,9 +23,12 @@ class OwnersController < ApplicationController
   end
 
   def edit
+    @owner = Owner.find(params[:id])
   end
 
   def update
+    @owner = Owner.find(params[:id])
+    @owner.update(params[:location])
   end
 
   def delete
