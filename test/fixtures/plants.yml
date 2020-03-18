@@ -7,6 +7,7 @@ one:
   indoor: false
   outdoor: false
   repot: MyString
+  owner: one
 
 two:
   plant_name: MyString
@@ -15,3 +16,4 @@ two:
   indoor: false
   outdoor: false
   repot: MyString
+  owner: two

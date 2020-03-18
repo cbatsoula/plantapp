@@ -10,6 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_03_18_163030) do
+
+  create_table "owners", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "plant_name"
+    t.string "plant_nickname"
+    t.string "acquired"
+    t.boolean "indoor"
+    t.boolean "outdoor"
+    t.string "repot"
+    t.integer "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_plants_on_owner_id"
+  end
 
 end
