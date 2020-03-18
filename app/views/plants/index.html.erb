@@ -1,2 +1,6 @@
 <h1>Plants#index</h1>
-<p>Find me in app/views/plants/index.html.erb</p>
+
+<% @plants.each do |plant| %>
+	<li><%="#{plant.plant_name} #{plant.acquired} #{plant.owner_id}" %></li>
+
+<%end%>
