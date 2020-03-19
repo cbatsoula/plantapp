@@ -5,7 +5,7 @@
 <li><%=link_to "Repot on: #{@plant.repot}", edit_plant_path(@plant)%></li>
 
 <% if @plant.indoor %>
-  <li><%= "Location: Indoors"%></li>
+  <li><%= link_to "Location: Indoors", edit_plant_path(@plant)%></li>
   <% else %>
-  <li><%= "Location: Outdoors"%></li>
+  <li><%= link_to "Location: Outdoors", edit_plant_path(@plant)%></li>
 <% end %>

@@ -12,7 +12,7 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.create(params[:plant_name][:acquired][:indoor][:outdoor][:repot][:owner_id])
+    @plant = Plant.create(plant_params)
     byebug
     redirect_to "/plants/#{@plant.id}"
   end

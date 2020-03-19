@@ -1,2 +1,11 @@
 <h1>Plants#edit</h1>
-<p>Find me in app/views/plants/edit.html.erb</p>
+
+ <%= form_for(@plant) do |f| %>
+  <label>Change plant nickname:</label><br>
+  <%= f.text_field :plant_nickname %><br>
+  
+  <label>Repot plant on:</label><br>
+  <%= f.text_area :repot %><br>
+  
+  <%= f.submit %>
+<% end %>
