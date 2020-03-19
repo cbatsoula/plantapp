@@ -1,7 +1,6 @@
 <h1>Owners#index</h1>
 
 <% @owners.each do |owner| %>
-  <%= link_to "#{owner.username}, #{owner.location}", owner_path(owner.id) %>
-	<li><%="#{owner.username} #{owner.id}" %></li>
+  <li><%= link_to "#{owner.username}, #{owner.location}", owner_path(owner.id) %></li>
 
 <%end%>
