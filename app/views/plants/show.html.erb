@@ -1,4 +1,11 @@
 <h1>Plants#show</h1>
-<p>Find me in app/views/plants/show.html.erb</p>
 
-<h1><%=@plant.plant_name%></h1>
+<h1><%= "Name: #{@plant.plant_name}"%></h1>
+<li><%= "Acquired on: #{@plant.acquired}"%></li>
+<li><%=link_to "Repot on: #{@plant.repot}", edit_plant_path(@plant)%></li>
+
+<% if @plant.indoor %>
+  <li><%= "Location: Indoors"%></li>
+  <% else %>
+  <li><%= "Location: Outdoors"%></li>
+<% end %>

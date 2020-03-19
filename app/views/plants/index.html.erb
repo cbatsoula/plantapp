@@ -1,6 +1,5 @@
 <h1>Plants#index</h1>
 
 <% @plants.each do |plant| %>
-	<li><%="#{plant.plant_name} #{plant.acquired} #{plant.owner_id}" %></li>
-
+	<li><%= link_to "#{plant.plant_name} #{plant.acquired}", plant_path(plant.id) %></li>
 <%end%>

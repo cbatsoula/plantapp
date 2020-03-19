@@ -1,4 +1,4 @@
 <h1>Owners#show</h1>
-<li><%= "#{@owner.username}"%></li>
-<li><%= "#{@owner.name}"%></li>
-<li><%= link_to "#{@owner.location}", edit_owner_path(@owner)%></li>
+<li><%= "Username: #{@owner.username}"%></li>
+<li><%= "Name: #{@owner.name}"%></li>
+<li><%= link_to "Location: #{@owner.location}", edit_owner_path(@owner)%></li>
