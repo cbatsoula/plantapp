@@ -2,3 +2,10 @@
 <li><%= "Username: #{@owner.username}"%></li>
 <li><%= "Name: #{@owner.name}"%></li>
 <li><%= link_to "Location: #{@owner.location}", edit_owner_path(@owner)%></li>
+
+
+<h1><%= "You have #{@owner.plants.count} plants!" %></h1>
+
+<% @owner.plants.each do |plant| %>
+<li><%= "#{plant.plant_name} aka #{plant.plant_nickname}" %></li>
+<% end %>
