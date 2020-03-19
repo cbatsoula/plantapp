@@ -29,6 +29,7 @@ class OwnersController < ApplicationController
   def update
     @owner = Owner.find(params[:id])
     @owner.update(params[:location])
+    redirect_to @owner
   end
 
   def delete

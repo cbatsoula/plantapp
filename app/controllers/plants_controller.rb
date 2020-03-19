@@ -24,13 +24,15 @@ class PlantsController < ApplicationController
   def update
     @plant = Plant.find(params[:id])
     @plant.update(plant_params)
+    redirect_to @plant
 
   end
 
   def destroy
     @plant = Plant.find(params[:id])
     @plant.destroy
-    
+    redirect_to "/plants"
+
   end
 
   private

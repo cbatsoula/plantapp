@@ -1,2 +1,7 @@
 <h1>Owners#index</h1>
-<p>Find me in app/views/owners/index.html.erb</p>
+
+<% @owners.each do |owner| %>
+  <%= link_to "#{owner.username}, #{owner.location}", owner_path(owner.id) %>
+	<li><%="#{owner.username} #{owner.id}" %></li>
+
+<%end%>
