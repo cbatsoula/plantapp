@@ -13,10 +13,15 @@
   <%= text_field_tag :repot %><br>
 
   <label>Indoors?:</label>
-  <%= check_box_tag :indoor %><br>
+  <%= hidden_field_tag :indoor, '' %>
+  <%= check_box_tag :indoor, checked = true %><br>
 
   <label>Outdoors?:</label>
-  <%= check_box_tag :outdoor %><br>
+  <%= hidden_field_tag :outdoor, 'false' %>
+  <%= check_box_tag :outdoor, checked = true %><br>
+
+  <label>Owner?:</label>
+  <%= hidden_field_tag :owner_id, 2 %><br>
 
   <%= submit_tag "Add New Plant" %>
 <% end %>
