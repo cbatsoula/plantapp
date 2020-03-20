@@ -13,8 +13,8 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.create(plant_params)
-    byebug
-    redirect_to "/plants/#{@plant.id}"
+
+    redirect_to plant_path(@plant)
   end
 
   def edit

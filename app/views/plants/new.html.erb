@@ -1,2 +1,22 @@
 <h1>Plants#new</h1>
-<p>Find me in app/views/plants/new.html.erb</p>
+<%= form_tag @plant do %>
+  <label>Type of plant:</label>
+  <%= text_field_tag :plant_name %><br>
+
+  <label>Plant nickname:</label>
+  <%= text_field_tag :plant_nickname %><br>
+
+  <label>Acquired on:</label>
+  <%= text_field_tag :acquired %><br>
+
+  <label>Repot on:</label>
+  <%= text_field_tag :repot %><br>
+
+  <label>Indoors?:</label>
+  <%= check_box_tag :indoor %><br>
+
+  <label>Outdoors?:</label>
+  <%= check_box_tag :outdoor %><br>
+
+  <%= submit_tag "Add New Plant" %>
+<% end %>
