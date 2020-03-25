@@ -1,6 +1,7 @@
 <h1>Plants#show</h1>
 
 <h1><%= "Name: #{@plant.plant_name}"%></h1>
+<h1><%= "AKA: #{@plant.plant_nickname}"%></h1>
 <li><%= "Acquired on: #{@plant.acquired}"%></li>
 <li><%=link_to "Repot on: #{@plant.repot}", edit_plant_path(@plant)%></li>
 
