@@ -1,11 +1,17 @@
 <h1>Plants#edit</h1>
 
  <%= form_for(@plant) do |f| %>
+  <label>Change plant name:</label><br>
+  <%= f.text_field :plant_name %><br>
+
   <label>Change plant nickname:</label><br>
   <%= f.text_field :plant_nickname %><br>
   
   <label>Repot plant on:</label><br>
-  <%= f.text_area :repot %><br>
+  <%= f.text_field :repot %><br>
+
+  <label>Change acquired on:</label><br>
+  <%= f.text_field :acquired %><br>
 
   <label>Change plant location:</label><br>
   <%= f.check_box("indoor", {}, "yes", "no") %><br>

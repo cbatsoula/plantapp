@@ -26,11 +26,7 @@ class PlantsController < ApplicationController
   def update
     @plant = Plant.find(params[:id])
 
-
-    @plant.indoor = params[:indoor]
-    @plant.outdoor = params[:outdoor]
-
-    @plant.update(create_params)
+    @plant.update(update_params)
     redirect_to @plant
 
   end
@@ -47,5 +43,10 @@ class PlantsController < ApplicationController
   def create_params
     params.require(:plant).permit( :plant_name, :plant_nickname, :repot, :acquired, :owner_id)
   end
+
+  def update_params
+    params.require(:plant).permit( :plant_name, :plant_nickname, :repot, :acquired, :owner_id, :indoor, :outdoor)
+  end
+
 
 end
