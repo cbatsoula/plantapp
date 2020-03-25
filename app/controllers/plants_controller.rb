@@ -25,6 +25,11 @@ class PlantsController < ApplicationController
 
   def update
     @plant = Plant.find(params[:id])
+
+
+    @plant.indoor = params[:indoor]
+    @plant.outdoor = params[:outdoor]
+
     @plant.update(create_params)
     redirect_to @plant
 

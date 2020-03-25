@@ -8,8 +8,8 @@
   <%= f.text_area :repot %><br>
 
   <label>Change plant location:</label><br>
-  <%= f.text_field :indoor %><br>
-  <%= f.text_field :outdoor %><br>
+  <%= f.check_box("indoor", {}, "yes", "no") %><br>
+  <%= f.check_box( "outdoor", {}, "yes", "no") %><br>
   
   <%= f.submit %>
 <% end %>
