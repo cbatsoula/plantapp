@@ -7,5 +7,5 @@
 <h1><%= "You have #{@owner.plants.count} plants!" %></h1>
 
 <% @owner.plants.each do |plant| %>
-<li><%= "#{plant.plant_name} aka #{plant.plant_nickname}" %></li>
+<li><%= link_to "#{plant.plant_name} aka #{plant.plant_nickname}", "/plants/#{plant.id}" %></li>
 <% end %>
