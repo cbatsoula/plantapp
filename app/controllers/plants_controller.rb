@@ -12,9 +12,11 @@ class PlantsController < ApplicationController
   end
 
   def create
-    @plant = Plant.create(plant_params)
+    @plant = Plant.new(create_params)
+    @plant.save
 
-    redirect_to plant_path(@plant)
+    redirect_to @plant
+
   end
 
   def edit
@@ -23,7 +25,7 @@ class PlantsController < ApplicationController
 
   def update
     @plant = Plant.find(params[:id])
-    @plant.update(plant_params)
+    @plant.update(create_params)
     redirect_to @plant
 
   end
@@ -36,7 +38,9 @@ class PlantsController < ApplicationController
   end
 
   private
-  def plant_params
-    params.require(:plant).permit( :plant_name, :plant_nickname, :indoor, :outdoor, :repot, :acquired, :owner_id)
+
+  def create_params
+    params.require(:plant).permit( :plant_name, :plant_nickname, :repot, :acquired, :owner_id)
   end
+
 end

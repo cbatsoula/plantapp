@@ -1,27 +1,19 @@
 <h1>Plants#new</h1>
-<%= form_tag @plant do %>
+<%= form_for :plant do |f| %>
   <label>Type of plant:</label>
-  <%= text_field_tag :plant_name %><br>
+  <%= f.text_field :plant_name %><br>
 
   <label>Plant nickname:</label>
-  <%= text_field_tag :plant_nickname %><br>
+  <%= f.text_field :plant_nickname %><br>
 
   <label>Acquired on:</label>
-  <%= text_field_tag :acquired %><br>
+  <%= f.text_field :acquired %><br>
 
   <label>Repot on:</label>
-  <%= text_field_tag :repot %><br>
+  <%= f.text_field :repot %><br>
 
-  <label>Indoors?:</label>
-  <%= hidden_field_tag :indoor, '' %>
-  <%= check_box_tag :indoor, checked = true %><br>
+  <label>Owner:</label>
+  <%= f.collection_select :owner_id, Owner.all, :id, :username %>
 
-  <label>Outdoors?:</label>
-  <%= hidden_field_tag :outdoor, 'false' %>
-  <%= check_box_tag :outdoor, checked = true %><br>
-
-  <label>Owner?:</label>
-  <%= hidden_field_tag :owner_id, 2 %><br>
-
-  <%= submit_tag "Add New Plant" %>
+  <%= f.submit "Add New Plant" %>
 <% end %>

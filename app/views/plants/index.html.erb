@@ -1,5 +1,7 @@
 <h1>Plants#index</h1>
 
+<%= link_to "Add a plant", new_plant_path %>
+
 <% @plants.each do |plant| %>
 	<li><%= link_to "#{plant.plant_name} #{plant.acquired}", plant_path(plant.id) %></li>
 <%end%>
