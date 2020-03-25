@@ -4,9 +4,11 @@
 <h1><%= "AKA: #{@plant.plant_nickname}"%></h1>
 <li><%= "Acquired on: #{@plant.acquired}"%></li>
 <li><%=link_to "Repot on: #{@plant.repot}", edit_plant_path(@plant)%></li>
-
+<li><%= "indoor #{@plant.indoor}"  %></li>
+<li><%= "outdoor #{@plant.outdoor}" %></li>
 <% if @plant.indoor %>
   <li><%= link_to "Location: Indoors", edit_plant_path(@plant)%></li>
-  <% else %>
+<% end %>
+<% if @plant.outdoor %>
   <li><%= link_to "Location: Outdoors", edit_plant_path(@plant)%></li>
 <% end %>

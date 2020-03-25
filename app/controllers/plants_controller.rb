@@ -27,6 +27,7 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
 
     @plant.update(update_params)
+
     redirect_to @plant
 
   end
