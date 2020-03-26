@@ -5,13 +5,16 @@
 
 <li><%= "Acquired on: #{@plant.acquired}"%></li>
 <li><%=link_to "Repot on: #{@plant.repot}", edit_plant_path(@plant)%></li>
-<li><%= "indoor #{@plant.indoor}"  %></li>
-<li><%= "outdoor #{@plant.outdoor}" %></li>
+
 <% if @plant.indoor %>
-  <li><%= link_to "Location: Indoors", edit_plant_path(@plant)%></li>
+  <li><%= "Location: Indoors"%></li>
 <% end %>
 <% if @plant.outdoor %>
-  <li><%= link_to "Location: Outdoors", edit_plant_path(@plant)%></li>
+  <li><%= "Location: Outdoors"%></li>
 <% end %>
 
-<%= link_to 'Back', plants_path %>
+<%= link_to 'Edit', edit_plant_path(@plant) %> <br />
+
+<%= link_to 'Back', plants_path %> <br />
+
+<%= link_to 'Delete', @plant, method: :delete, data: { confirm: 'For real?' } %><br />
