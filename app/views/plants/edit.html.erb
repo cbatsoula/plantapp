@@ -14,8 +14,8 @@
   <%= f.text_field :acquired %><br>
 
   <label>Change plant location:</label><br>
-  <label>Indoor</label><br><%= f.check_box("indoor", {}, "yes", "no") %><br>
-  <label>Outdoor</label><br><%= f.check_box( "outdoor", {}, "yes", "no") %><br>
+  <label>Indoor</label><br><%= f.check_box :indoor, {}, "true", "false" %><br>
+  <label>Outdoor</label><br><%= f.check_box :outdoor, {}, "true", "false" %><br>
   
   <%= f.submit "Submit changes"%>
 <% end %>
