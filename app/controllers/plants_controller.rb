@@ -28,7 +28,7 @@ class PlantsController < ApplicationController
 
     @plant.update(update_params)
 
-    raise params.inspect
+
 
     redirect_to @plant
 
