@@ -1,10 +1,13 @@
 class PlantsController < ApplicationController
   def index
     @plants = Plant.all
+
+    render json: @plants
   end
 
   def show
     @plant = Plant.find(params[:id])
+    render json: @plant
   end
 
   def new
@@ -15,7 +18,8 @@ class PlantsController < ApplicationController
     @plant = Plant.new(create_params)
     @plant.save
 
-    redirect_to @plant
+    # redirect_to @plant
+    render json: @plant
 
   end
 
@@ -27,18 +31,17 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
 
     @plant.update(update_params)
+    # redirect_to @plant
 
-
-
-    redirect_to @plant
+    render json: @plant
 
   end
 
   def destroy
     @plant = Plant.find(params[:id])
     @plant.destroy
-    redirect_to "/plants"
-
+    # redirect_to "/plants"
+    render json: @plant
   end
 
   private
