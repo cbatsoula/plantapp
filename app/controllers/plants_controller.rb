@@ -1,5 +1,5 @@
 class PlantsController < ApplicationController
-  skip_before_action :verify_authenticity_token, :only => [:create,:inquire_enterprise]
+  skip_before_action :verify_authenticity_token, :only => [:create,:inquire_enterprise, :destroy]
 
   def index
     @plants = Plant.all
